@@ -8,10 +8,12 @@ ul {
 }
 
 .links {
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a:link {
