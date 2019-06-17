@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>React Hello World</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id='application-root'></div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            function App(props) {
+                return(
+                    <nav>
+                    {props.children}
+                    </nav>
+                );
+            }
+            ReactDOM.render(
+                <App className='myNav'>
+                    <ul className="links">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="https://sallys-blog.de/">Blog</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </App>, 
+                document.querySelector('#application-root')
+            );
+            function Header(props) {
+                return(
+                    <header>
+                        {props.children}
+                    </header>
+                );
+            }
+            ReactDOM.render(
+                <Header className='myHeader'>
+                    <h1>Sally Student</h1>
+                    <h2>Professional Chef<h2>
+                    <div>
+                    <img src="http://i47.tinypic.com/s1jp8o.jpg" alt="Sally Student">
+                    </div> 
+                </Header>,
+                document.querySelector('#application-root');    
+            )
+        </script>
+    </body>
+</html>
